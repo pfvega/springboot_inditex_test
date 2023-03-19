@@ -26,21 +26,19 @@ public class Product {
     
     @ManyToMany
     @JoinTable(
-        name = "producto_tag",
-        joinColumns = @JoinColumn(name = "producto_id"),
+        name = "product_tag",
+        joinColumns = @JoinColumn(name = "product_id"),
         inverseJoinColumns = @JoinColumn(name = "tag_id"))
     private List<Tag> tags = new ArrayList<>();    
     
 	public Product() {
 	}
 	
-	public Product(Long id, String name, double price, boolean availability, List<Tag> tags) {
+	public Product(String name, double price, boolean availability) {
 		
-		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.availability = availability;
-		this.tags = tags;
 	}
 	
 	public Long getId() {

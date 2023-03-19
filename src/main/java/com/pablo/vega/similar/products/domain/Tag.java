@@ -26,11 +26,9 @@ public class Tag {
 	public Tag() {
 	}
 	
-	public Tag(Long id, String name, String description, List<Product> productos) {
-		this.id = id;
+	public Tag(String name, String description) {
 		this.name = name;
 		this.description = description;
-		this.productos = productos;
 	}
 
 	public Long getId() {
